@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+
+    <!-- CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section>
+      <div class="header" id="header">
+        <h1>CRUDS</h1>
+        <p>Product Management System</p>
+        <p>Create, Read, Update, Delete, Search</p>
+      </div>
+      <div class="body">
+        <div class="container">
+          <input type="text" id="productTitle" class="input" placeholder="Product Title" />
+          
+          <div class="count">
+            <input type="number" id="productPrice" class="input totall" placeholder="Price" />
+            <input type="number" id="productTaxes" class="input totall" placeholder="Taxes" />
+            <input type="number" id="productAds" class="input totall" placeholder="Ads" />
+            <input type="number" id="productDiscount" class="input totall" placeholder="Discount" />
+            <span id="total"></span>
+          </div>
+          
+          <input type="number" id="productCount" class="input" placeholder="Count" />
+          <input type="text" id="productCategory" class="input" placeholder="Product Category" />
+
+          <button class="btn" type="submit" id="create">Create Product</button>
+          <input onkeyup="searchInput(this.value)" type="text"  id="productSearch" class="input" placeholder="Product Search" />
+
+          <div class="parentBTN">
+            <button onclick="searchByButton(this.id)" class="btn search" type="submit" id="searchTitle">Search by Title</button>
+            <button onclick="searchByButton(this.id)" class="btn search" type="submit" id="searchCategory">Search by Category</button>
+          </div>
+
+          <div id="Add-btn-deleteAll">
+
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container containerTable">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>Update</th>
+              <th>delete</th> 
+            </tr>
+          </thead>
+            
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

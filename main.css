@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+}
+
+.container{
+    margin: auto;
+    width: 70%;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+
+.header{
+    color: aliceblue;
+    text-align: center;
+}
+
+.header h1{
+    margin: 30px 0 10px 0;
+    font-size: 35px;
+}
+
+.header p{
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+input{
+    transition: all .4s;
+    background-color: rgb(13, 0, 17);
+    border: 0;
+    color: aliceblue;
+}input:focus{
+    outline: transparent;
+    transform: scaleX(1.1);
+    font-size: 16px;
+}
+
+.count{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}.count input{
+    flex-grow: 1;
+    flex-basis: 100px;
+    margin-right: 3px;
+}
+.count span{
+    padding: 5px;
+    border-radius: 3px;
+    background-color: brown;
+    margin-top: 10px;
+    margin-left: 2px;
+}.count span::before{
+    content: "Total: ";
+}
+
+.btn{
+    margin-top: 13px;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 50px;
+    background-color: brown;
+    border: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .4s;
+}
+.btn:hover{
+    opacity: .8;
+    letter-spacing: 1px;
+}
+.parentBTN{
+    display: flex;
+    justify-content: space-around;
+}
+.search{
+    width: 49%;
+}
+
+
+
+/* Table */
+
+table{
+    width: 100%;
+    text-align: center;
+    color:#f0ffffa9;
+    margin-top: 30px;
+    border: 1px solid #444 ;
+    padding: 7px;
+    border-radius: 10px;
+    
+}
+thead{
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+tbody{
+    
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+th{
+    padding: 10px 0;
+}
+
+#deleteAll{
+    margin: 10px 0;
+}
+.updateAndDelete{
+    color: aliceblue;
+    padding: 7px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    transition: all .4s;
+}
+.updateAndDelete:hover{
+    opacity: .8;
+}
+.update{
+    background-color: #4361ee;
+}
+.Delete{
+    background-color: brown;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* CSS rules */
+    .container{
+        margin: 0 15px;
+        width: auto;
+        
+    }
+  }
+
+
+  @media only screen and (max-width: 426px) {
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    table {
+        
+        display: block; 
+        width: 100%; 
+        border: none;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody, tr, td {
+        display: block; 
+        
+    }
+
+    tr {
+        border: 1px solid #ddd; 
+        margin: 20px 10px; 
+    }
+
+    td {
+        display: flex;
+        justify-content: space-around; 
+        padding: 10px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #ddd; 
+    }
+
+    td:last-child {
+        border-bottom: none; 
+    }
+    td:first-child {
+        font-weight:bold;
+        font-size: 16px;
+        text-shadow: #dddddd31 2px 0px 2px ;
+        color: brown; 
+        border: none;
+    }
+
+    td:before {
+        text-transform: uppercase;
+        content: attr(data-label); 
+        font-weight: bold; 
+        font-size: 16px;
+    }
+    
+    .dis{
+        display: inline-block;
+        border-bottom: none;
+
+    }
+    .left{
+        margin-left: 10px;
+    }
+}
