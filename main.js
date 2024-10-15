@@ -134,6 +134,7 @@ function clearInputs(){
     category.value = '';
     count.value = '';
     total.innerHTML = '';
+    searchProduct.value = '';
     total.style.background = 'brown';
 }
 
